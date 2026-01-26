@@ -1,0 +1,22 @@
+# robots.txt - SEO Configuration
+# Allow all search engines to crawl the website
+
+User-agent: *
+Allow: /
+Disallow: /.*
+
+# Specify sitemap location
+Sitemap: https://plc-training-kits.tech/sitemap.xml
+
+# Crawl delay (optional - not required for most sites)
+# Crawl-delay: 1
+
+# Specific rules for search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
