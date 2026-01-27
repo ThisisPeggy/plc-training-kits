@@ -132,6 +132,8 @@
         }
         .btn-whatsapp { background: var(--whatsapp); color: white; }
         .btn-whatsapp:hover { background: #1da851; transform: translateY(-2px); }
+        .btn-share { background: var(--primary); color: white; padding: 0.5rem 1rem; font-size: 0.85rem; }
+        .btn-share:hover { background: var(--primary-light); transform: translateY(-2px); }
         .btn-outline { background: white; border: 2px solid var(--border); color: var(--text); }
         .btn-outline:hover { border-color: var(--primary); color: var(--primary); }
 
@@ -533,16 +535,6 @@
 
         /* Share Dropdown */
         .share-dropdown { position: relative; }
-        .share-toggle {
-            transition: all 0.2s ease;
-            padding: 0.5rem 1rem !important;
-            font-size: 0.85rem !important;
-        }
-        .share-toggle:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-            transform: translateY(-2px);
-        }
         .share-menu {
             display: none !important;
             position: absolute;
@@ -859,7 +851,7 @@
                 <span class="ar">WhatsApp</span>
             </a>
             <div class="share-dropdown" id="shareDropdown">
-                <button class="share-toggle btn btn-outline" type="button" title="Share">
+                <button class="share-toggle btn btn-share" type="button" title="Share">
                     <span class="en">Share</span><span class="zh">分享</span><span class="ru">Поделиться</span><span class="fr">Partager</span><span class="es">Compartir</span><span class="ar">شارك</span>
                 </button>
                 <div class="share-menu">
