@@ -3,7 +3,6 @@
 
 User-agent: *
 Allow: /
-Disallow: /.*
 
 # Specify sitemap location
 Sitemap: https://plc-training-kits.tech/sitemap.xml
