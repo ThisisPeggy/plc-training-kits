@@ -534,23 +534,25 @@
         /* Share Dropdown */
         .share-dropdown { position: relative; }
         .share-toggle {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            background: none;
             border: none;
-            padding: 0.65rem 0.65rem;
-            border-radius: 50%;
+            padding: 0;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            color: white;
-            width: 40px;
-            height: 40px;
-            box-shadow: 0 2px 8px rgba(26, 54, 93, 0.3);
+            color: var(--primary);
+            width: auto;
+            height: auto;
+            box-shadow: none;
         }
         .share-toggle:hover {
-            transform: scale(1.1);
-            box-shadow: 0 4px 16px rgba(26, 54, 93, 0.4);
+            transform: scale(1.2);
+            opacity: 0.8;
+        }
+        .share-toggle:active {
+            transform: scale(0.9);
         }
         .share-toggle:active {
             transform: scale(0.95);
@@ -814,7 +816,7 @@
             </a>
             <div class="share-dropdown" id="shareDropdown">
                 <button class="share-toggle" type="button" title="Share">
-                    <svg fill="currentColor" viewBox="0 0 24 24" width="20" height="20"><path d="M16.6915026,12.4744748 L3.50612381,13.2599618 C3.19218622,13.2599618 3.03521743,13.4170592 3.03521743,13.5741566 L1.15159189,20.0151496 C0.8376543,20.8006365 0.99,21.89 1.77946707,22.52 C2.41,22.99 3.50612381,23.1 4.13399899,22.8429026 L21.714504,14.0454487 C22.6563168,13.5741566 23.1272231,12.6315722 22.9702544,11.6889879 L4.13399899,1.16127562 C3.34915502,0.9041783 2.40734225,1.01528431 1.77946707,1.4865764 C0.994623095,2.11525818 0.837654326,3.20452867 1.15159189,3.98974444 L3.03521743,10.4306373 C3.03521743,10.5877347 3.19218622,10.7448321 3.50612381,10.7448321 L16.6915026,11.5303191 C16.6915026,11.5303191 17.1624089,11.5303191 17.1624089,12.0015112 C17.1624089,12.4744748 16.6915026,12.4744748 16.6915026,12.4744748 Z"/></svg>
+                    <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24"><path d="M16.6915026,12.4744748 L3.50612381,13.2599618 C3.19218622,13.2599618 3.03521743,13.4170592 3.03521743,13.5741566 L1.15159189,20.0151496 C0.8376543,20.8006365 0.99,21.89 1.77946707,22.52 C2.41,22.99 3.50612381,23.1 4.13399899,22.8429026 L21.714504,14.0454487 C22.6563168,13.5741566 23.1272231,12.6315722 22.9702544,11.6889879 L4.13399899,1.16127562 C3.34915502,0.9041783 2.40734225,1.01528431 1.77946707,1.4865764 C0.994623095,2.11525818 0.837654326,3.20452867 1.15159189,3.98974444 L3.03521743,10.4306373 C3.03521743,10.5877347 3.19218622,10.7448321 3.50612381,10.7448321 L16.6915026,11.5303191 C16.6915026,11.5303191 17.1624089,11.5303191 17.1624089,12.0015112 C17.1624089,12.4744748 16.6915026,12.4744748 16.6915026,12.4744748 Z"/></svg>
                 </button>
                 <div class="share-menu">
                     <a href="#" class="share-item" data-platform="facebook"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg> <span class="en">Facebook</span><span class="zh">Facebook</span><span class="ru">Facebook</span><span class="fr">Facebook</span><span class="es">Facebook</span><span class="ar">Facebook</span></a>
