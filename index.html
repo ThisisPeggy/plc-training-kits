@@ -580,6 +580,12 @@
     }
     </script>
 
+    <!-- Performance Optimization -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style">
+
     <style>
         :root {
             --primary: #1a365d;
@@ -1256,6 +1262,19 @@
             }
         }
     </style>
+
+    <!-- Web Vitals Performance Monitoring -->
+    <script>
+        window.addEventListener('load', function() {
+            const perfData = performance.timing;
+            const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'page_view', {
+                    'page_load_time': pageLoadTime
+                });
+            }
+        });
+    </script>
 </head>
 <body data-lang="en">
 
