@@ -1327,6 +1327,90 @@
 })();
 </script>
 
+<!-- Multi-Language SEO Optimization -->
+<script>
+(function() {
+  // Language-specific titles and descriptions for SEO
+  const langContent = {
+    en: {
+      title: 'PLC Training Kits | Siemens S7-1200 & Mitsubishi FX5U Equipment',
+      description: 'Professional PLC training kits featuring Siemens S7-1200 and Mitsubishi FX5U. Industrial automation equipment for learning and certification.'
+    },
+    zh: {
+      title: 'PLC培训套件 | 西门子S7-1200和三菱FX5U设备',
+      description: '专业PLC培训套件，采用西门子S7-1200和三菱FX5U。工业自动化设备，用于学习和认证。'
+    },
+    ru: {
+      title: 'Наборы для обучения ПЛК | Оборудование Siemens S7-1200 и Mitsubishi FX5U',
+      description: 'Профессиональные наборы для обучения ПЛК с использованием Siemens S7-1200 и Mitsubishi FX5U. Промышленное оборудование для обучения и сертификации.'
+    },
+    fr: {
+      title: 'Kits de formation PLC | Équipement Siemens S7-1200 et Mitsubishi FX5U',
+      description: 'Kits de formation PLC professionnels avec Siemens S7-1200 et Mitsubishi FX5U. Équipement industriel pour la formation et la certification.'
+    },
+    es: {
+      title: 'Kits de capacitación PLC | Equipo Siemens S7-1200 y Mitsubishi FX5U',
+      description: 'Kits de capacitación PLC profesionales con Siemens S7-1200 y Mitsubishi FX5U. Equipo industrial para capacitación y certificación.'
+    },
+    ar: {
+      title: 'مجموعات تدريب PLC | معدات Siemens S7-1200 و Mitsubishi FX5U',
+      description: 'مجموعات تدريب PLC احترافية تتميز بـ Siemens S7-1200 و Mitsubishi FX5U. معدات صناعية للتعلم والشهادة.'
+    }
+  };
+
+  // Function to update page title and description
+  function updatePageContent() {
+    const currentLang = document.body.getAttribute('data-lang') || 'en';
+    const content = langContent[currentLang] || langContent.en;
+
+    // Update page title
+    document.title = content.title;
+
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', content.description);
+    }
+
+    // Update Open Graph title
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', content.title);
+    }
+
+    // Update Open Graph description
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) {
+      ogDesc.setAttribute('content', content.description);
+    }
+  }
+
+  // Update content when page loads
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updatePageContent);
+  } else {
+    updatePageContent();
+  }
+
+  // Monitor language changes
+  const observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      if (mutation.attributeName === 'data-lang') {
+        updatePageContent();
+      }
+    });
+  });
+
+  observer.observe(document.body, {
+    attributes: true,
+    attributeFilter: ['data-lang']
+  });
+
+  // Store update function globally for manual language switching
+  window.updatePageContent = updatePageContent;
+})();
+</script>
+
 <!-- Header -->
 <header>
     <div class="header-inner">
