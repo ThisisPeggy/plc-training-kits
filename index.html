@@ -37,6 +37,17 @@
     <meta property="article:author" content="Peggy Chan">
     <meta property="article:published_time" content="2026-01-29">
 
+    <!-- Multi-language hreflang tags for SEO -->
+    <!-- Tell Google which languages are available -->
+    <link rel="alternate" hreflang="en" href="https://plc-training-kits.tech/" />
+    <link rel="alternate" hreflang="zh" href="https://plc-training-kits.tech/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://plc-training-kits.tech/" />
+    <link rel="alternate" hreflang="ru" href="https://plc-training-kits.tech/" />
+    <link rel="alternate" hreflang="fr" href="https://plc-training-kits.tech/" />
+    <link rel="alternate" hreflang="es" href="https://plc-training-kits.tech/" />
+    <link rel="alternate" hreflang="ar" href="https://plc-training-kits.tech/" />
+    <link rel="alternate" hreflang="x-default" href="https://plc-training-kits.tech/" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -1283,6 +1294,38 @@
     </script>
 </head>
 <body data-lang="en">
+
+<!-- Auto Language Detection Script -->
+<script>
+(function() {
+  // Supported languages
+  const supportedLangs = ['en', 'zh', 'ru', 'fr', 'es', 'ar'];
+
+  // Get saved language preference
+  const savedLang = localStorage.getItem('preferredLanguage');
+
+  // Get browser language
+  const browserLang = navigator.language.split('-')[0];
+
+  // Determine which language to use
+  let selectedLang = 'en'; // default
+
+  if (savedLang && supportedLangs.includes(savedLang)) {
+    // Use saved preference
+    selectedLang = savedLang;
+  } else if (supportedLangs.includes(browserLang)) {
+    // Use browser language if supported
+    selectedLang = browserLang;
+  }
+
+  // Apply language to body element
+  document.documentElement.lang = selectedLang;
+  document.body.setAttribute('data-lang', selectedLang);
+
+  // Store preference
+  localStorage.setItem('preferredLanguage', selectedLang);
+})();
+</script>
 
 <!-- Header -->
 <header>
